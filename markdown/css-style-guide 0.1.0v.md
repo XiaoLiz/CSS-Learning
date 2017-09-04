@@ -28,7 +28,6 @@
 ##### [换行](#Wrap)
 
 
-
 <br>
 <br>
 <a name="css"></a>
@@ -133,11 +132,11 @@ css
 
  element,
 .dialog {
-   color:#ccc;
+	color:#ccc;
       
-   p{
+	p{
    		font-szie:12px;
-   }
+	}
 }
 
 ```
