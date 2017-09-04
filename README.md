@@ -53,8 +53,7 @@
 <br>
 **示例**
 
-```
-html
+```html
 
 <article class="listing-card listing-card-featured">
 
@@ -68,8 +67,7 @@ html
 ```
 
 
-```
-less
+```less
 
 .listing-card{
 
@@ -108,8 +106,7 @@ less
 <br>
 **Bad**
 
-```
-css
+```css
 
 .element{color: red; background-color: black;}
 
@@ -125,8 +122,7 @@ element, .dialog {
 
 **Good**
 
-```
-css
+```css
 
 .element{
 	color: red;
@@ -154,8 +150,7 @@ css
 
 **Bad**
 
-```
-css
+```css
 
 .element {
  position: absolute;
@@ -166,8 +161,7 @@ css
 
 **Good**
 
-```
-css
+```css
 
 .element {
 	position: absolute;
@@ -208,8 +202,7 @@ css
 
 **Bad**
 
-```
-less
+```less
 
 @default-text-color: #333;
 @default-color: #fff;
@@ -224,8 +217,7 @@ less
 
 **Good**
 
-```
-less
+```less
 
 @import "est/all.less";
 
@@ -250,8 +242,7 @@ less
 
 **Bad**
 
-```
-less
+```less
 
 @import 'est/all';
 @import "my/mixins.less";
@@ -261,8 +252,7 @@ less
 
 **Good**
 
-```
-less
+```less
 
 @import "est/all.less";
 @import "my/mixins.less";
@@ -281,8 +271,7 @@ less
 **Bad**
 
 
-```
-less
+```less
 
 .big-text {
     font-size: 2em;
@@ -296,8 +285,7 @@ h3 {
 
 **Good**
 
-```
-less
+```less
 
 .big-text() {
     font-size: 2em;
@@ -318,8 +306,7 @@ h3 {
 
 
 
-```
-less
+```less
 
 **Bad**
 
