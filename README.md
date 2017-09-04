@@ -35,7 +35,7 @@
 <br>
 <br>
 <a name="css"></a>
-### CSS:
+### CSS
 
 
 <a name="bem"></a>
