@@ -136,7 +136,7 @@ css
    color:#ccc;
       
    p{
-   		font-szie:12px;
+        font-szie:12px;
    }
 }
 
