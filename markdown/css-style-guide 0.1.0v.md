@@ -110,10 +110,10 @@ css
 .element{color: red; background-color: black;}
 
 element, .dialog {
-   color:#ccc;
-   p{
-   		font-szie:12px;
-   }
+    color:#ccc;
+	p{
+		font-szie:12px;
+	}
 }
 
 ```
