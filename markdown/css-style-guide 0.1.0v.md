@@ -6,19 +6,19 @@
 ```
 
 ### [CSS :](#css)
-  
+
 ##### [BEM命名](#bem)
-     
+
 ##### [缩进](#soft-tab)
-	
+
 ##### [ID选择器](#id-selectors)
-        
+
 ##### [!important](#important)
 <br>
 <br>
 
 ### [Less相关](#less)
- 
+
 ##### [代码组织](#lessFormat)
 
 ##### [@import 语句](#import)
@@ -55,9 +55,9 @@ html
 <article class="listing-card listing-card-featured">
 
   <h1 class="listing-card-title"> BEM </h1>
-  
-  <div class="listing-card-content">                    
-    <p class=listing-card-brief></p>                        
+
+  <div class="listing-card-content">
+    <p class=listing-card-brief></p>
   </div>
 
 </article>
@@ -68,17 +68,17 @@ html
 less
 
 .listing-card{
-	
+
 	&--title{
 		//...
 	}
-	
+
 	&--content{
-		
+
 	}
-	
+
 	&--brief{
-		
+
 	}
 
 }
@@ -88,19 +88,19 @@ less
 #####  BEM解决的问题；
 
 ```
-	 各模块更独立、耦合性几乎为另；
-	 
+	 各模块更独立、耦合性几乎为零；
+
 	 缺点: 类名称会过长，不太美观
-	
+
 ```
 
-	
-	
-	
+
+
+
 <br>
 <a name="wrap"></a>
 ### 换行
-	
+
 <br>
 **Bad**
 
@@ -125,7 +125,7 @@ element, .dialog {
 css
 
 .element{
-	color: red; 
+	color: red;
 	background-color: black;
 }
 
@@ -133,7 +133,7 @@ css
  element,
 .dialog {
     color:#ccc;
-      
+
     p{
         font-szie:12px;
     }
@@ -151,7 +151,7 @@ css
 **Bad**
 
 ```
-css 
+css
 
 .element {
  position: absolute;
@@ -195,7 +195,7 @@ css
 ### 样式组织
 
 
-**less 按如下形式按顺序组织** 
+**less 按如下形式按顺序组织**
 
 1. `@import`
 2. 变量声明
@@ -332,7 +332,7 @@ div {
 
 div {
    display: none;
-	
+
    button {
 		min-width: 100px;
 		height: 35px;
