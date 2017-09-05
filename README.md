@@ -264,6 +264,7 @@ element, .dialog {
 ```
 
 <br>
+
 <a name="Mixin"></a>
 ### 混入（Mixin）
 
@@ -272,6 +273,7 @@ element, .dialog {
 * `如果混入的是本身不输出内容的 mixin，必须在 mixin 后添加括号（即使不传参数），以区分这是否是一个 className（修改以后是否会影响 HTML）`
 
 <br>
+
 **Bad**
 
 
