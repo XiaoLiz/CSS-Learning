@@ -11,6 +11,8 @@
 
 ##### [BEM命名](#bem)
 
+##### [换行](#Wrap)
+
 ##### [缩进](#soft-tab)
 
 ##### [ID选择器](#id-selectors)
@@ -27,7 +29,7 @@
 
 ##### [混入(Mixin)](#Mixin)
 
-##### [换行](#Wrap)
+
 <br>
 <br>
 
@@ -104,6 +106,9 @@
 <a name="wrap"></a>
 ### 换行
 
+* `为了css可读性， 每一个类或者元素的区块样式结束，建议换行增加文件的可读性`
+
+<br>
 <br>
 **Bad**
 
@@ -298,46 +303,6 @@ h3 {
 ```
 
 
-
-<br>
-<a name="Wrap"></a>
-### 换行
-
-* `为了css可读性， 每一个类或者元素的区块样式结束，建议换行，增加源文件的可读性`
-
-
-
-```less
-
-**Bad**
-
-div {
-   display: none;
-   button {
-		min-width: 100px;
-		height: 35px;
-		line-height: 35px;
-	}
-}
-
-
-**Good**
-
-div {
-   display: none;
-
-   button {
-		min-width: 100px;
-		height: 35px;
-		line-height: 35px;
-	}
-}
-```
-
-<br>
-<br>
-<a name="about"></a>
-### 关于我们
 <br>
 <br>
 
