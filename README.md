@@ -54,6 +54,7 @@
 
 
 <br>
+
 **示例**
 
 ```html
@@ -103,6 +104,7 @@
 
 
 <br>
+
 <a name="wrap"></a>
 ### 换行
 
@@ -147,7 +149,9 @@ element, .dialog {
 
 
 <br>
+
 <a name="soft-tab"></a>
+
 ### 缩进
 
 * 使用soft tab（使用tab缩进, 各IDE需要设置tab size设置为:4)
@@ -177,6 +181,7 @@ element, .dialog {
 
 
 <br>
+
 <a name="id-selectors"></a>
 ### ID选择器
 
@@ -188,11 +193,13 @@ element, .dialog {
 
 
 <br>
+
 <a name="less"></a>
 ## Less相关
 
 
 <br>
+
 <a name="lessFormat"></a>
 ### 样式组织
 
@@ -238,6 +245,7 @@ element, .dialog {
 
 
 <br>
+
 <a name="import"></a>
 #### @import 语句
 
