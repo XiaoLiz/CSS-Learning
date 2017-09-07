@@ -1,13 +1,17 @@
+# css-style-guideline
 
-## css-style-guide 0.1.0v.md
+### 做项目的一些总结，把一些个人觉比较重要的归纳出来，后续完善，有不足之处，欢迎各位大侠提出更好建议！
 
-```
-  用更合理的方式写css
-```
+<br>
+
+### 用更合理的方式写css
+
 
 ### [CSS :](#css)
 
 ##### [BEM命名](#bem)
+
+##### [换行](#wrap)
 
 ##### [缩进](#soft-tab)
 
@@ -25,13 +29,15 @@
 
 ##### [混入(Mixin)](#Mixin)
 
-##### [换行](#Wrap)
-
 
 <br>
+
+#### [关于我们](#about)
+
 <br>
+
 <a name="css"></a>
-### CSS:
+### CSS
 
 
 <a name="bem"></a>
@@ -47,10 +53,10 @@
 
 
 <br>
+
 **示例**
 
-```
-html
+```html
 
 <article class="listing-card listing-card-featured">
 
@@ -64,8 +70,7 @@ html
 ```
 
 
-```
-less
+```less
 
 .listing-card{
 
@@ -88,24 +93,23 @@ less
 #####  BEM解决的问题；
 
 ```
-	 各模块更独立、耦合性几乎为零；
-
-	 缺点: 类名称会过长，不太美观
-
+各模块更独立、耦合性几乎为零；
+缺点: 类名称会过长，不太美观
 ```
 
 
 
 
 <br>
+
 <a name="wrap"></a>
 ### 换行
 
-<br>
+* 为了css可读性， 每一个类或者元素的区块样式结束，建议换行增加文件的可读性
+
 **Bad**
 
-```
-css
+```css
 
 .element{color: red; background-color: black;}
 
@@ -121,8 +125,7 @@ element, .dialog {
 
 **Good**
 
-```
-css
+```css
 
 .element{
 	color: red;
@@ -132,26 +135,27 @@ css
 
  element,
 .dialog {
-    color:#ccc;
+	color:#ccc;
 
-    p{
-        font-szie:12px;
-    }
+	p{
+   		font-szie:12px;
+	}
 }
 
 ```
 
 
 <br>
+
 <a name="soft-tab"></a>
+
 ### 缩进
 
 * 使用soft tab（使用tab缩进, 各IDE需要设置tab size设置为:4)
 
 **Bad**
 
-```
-css
+```css
 
 .element {
  position: absolute;
@@ -162,8 +166,7 @@ css
 
 **Good**
 
-```
-css
+```css
 
 .element {
 	position: absolute;
@@ -175,6 +178,7 @@ css
 
 
 <br>
+
 <a name="id-selectors"></a>
 ### ID选择器
 
@@ -186,11 +190,13 @@ css
 
 
 <br>
+
 <a name="less"></a>
 ## Less相关
 
 
 <br>
+
 <a name="lessFormat"></a>
 ### 样式组织
 
@@ -204,8 +210,7 @@ css
 
 **Bad**
 
-```
-less
+```less
 
 @default-text-color: #333;
 @default-color: #fff;
@@ -220,8 +225,7 @@ less
 
 **Good**
 
-```
-less
+```less
 
 @import "est/all.less";
 
@@ -238,6 +242,7 @@ less
 
 
 <br>
+
 <a name="import"></a>
 #### @import 语句
 
@@ -246,8 +251,7 @@ less
 
 **Bad**
 
-```
-less
+```less
 
 @import 'est/all';
 @import "my/mixins.less";
@@ -257,8 +261,7 @@ less
 
 **Good**
 
-```
-less
+```less
 
 @import "est/all.less";
 @import "my/mixins.less";
@@ -266,6 +269,7 @@ less
 ```
 
 <br>
+
 <a name="Mixin"></a>
 ### 混入（Mixin）
 
@@ -274,11 +278,11 @@ less
 * `如果混入的是本身不输出内容的 mixin，必须在 mixin 后添加括号（即使不传参数），以区分这是否是一个 className（修改以后是否会影响 HTML）`
 
 <br>
+
 **Bad**
 
 
-```
-less
+```less
 
 .big-text {
     font-size: 2em;
@@ -289,11 +293,9 @@ h3 {
 }
 ```
 
-
 **Good**
 
-```
-less
+```less
 
 .big-text() {
     font-size: 2em;
@@ -304,43 +306,25 @@ h3 {
 }
 ```
 
+<br>
 
+<a name="about"></a>
+### 关于我们
 
 <br>
-<a name="Wrap"></a>
-### 换行
 
+### 一群爱学习，爱分享，爱装逼，爱斗图，爱吃辣条，有梦想的年轻人...
+<br>
 
+![](http://thumb.qschou.com/files/tmp/91312614c4e9017b3b5727f05e0abcb00ba6da96h5.jpg)
 
+<br>
 
-```
-less
+### 我们不是 BAT 背景的技术大牛；
+### 但我们是一群年轻、有梦想、乐于分享 IT 工程师;（请尊称自己为工程师、不是程序猿）；
+### 我们曾经都想过，为什么网上那么多大牛，写的博客 ，发的文章，都特么好资深、好流弊!
+### 其实你也努力了，只不过别人比你再多了一些坚持，多了一分努力，多了一个梦想，仅此而已。
 
-**Bad**
-
-div {
-   display: none;
-   button {
-		min-width: 100px;
-		height: 35px;
-		line-height: 35px;
-	}
-}
-
-
-**Good**
-
-div {
-   display: none;
-
-   button {
-		min-width: 100px;
-		height: 35px;
-		line-height: 35px;
-	}
-}
-```
-
-
+![](http://thumb.qschou.com/files/tmp/913968524aaca529ddf5af5af48c94c25b614beeh5.jpg)
 
 
