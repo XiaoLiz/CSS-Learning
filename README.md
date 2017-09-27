@@ -73,19 +73,17 @@
 ```less
 
 .listing-card{
+    &--title{
+    	//...
+    }
+    
+    &--content{
+    
+    }
 
-	&--title{
-		//...
-	}
+    &--brief{
 
-	&--content{
-
-	}
-
-	&--brief{
-
-	}
-
+    }
 }
 
 ```
@@ -93,9 +91,8 @@
 #####  BEM解决的问题；
 
 ```
-	 各模块更独立、耦合性几乎为零；
-
-	 缺点: 类名称会过长，不太美观
+各模块更独立、耦合性几乎为零；
+缺点: 类名称会过长，不太美观
 
 ```
 
@@ -117,9 +114,9 @@
 
 element, .dialog {
     color:#ccc;
-	p{
-		font-szie:12px;
-	}
+    p{
+    	font-szie:12px;
+    }
 }
 
 ```
@@ -130,18 +127,17 @@ element, .dialog {
 ```css
 
 .element{
-	color: red;
-	background-color: black;
+    color: red;
+    background-color: black;
 }
 
 
  element,
 .dialog {
-	color:#ccc;
-
-	p{
-   		font-szie:12px;
-	}
+    color:#ccc;
+    p{
+    	font-szie:12px;
+    }
 }
 
 ```
@@ -160,9 +156,9 @@ element, .dialog {
 ```css
 
 .element {
-	position: absolute;
-	top: 10px;
-	left: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 ```
 
@@ -171,9 +167,9 @@ element, .dialog {
 ```css
 
 .element {
-	position: absolute;
-	top: 10px;
-	left: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 ```
