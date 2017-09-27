@@ -160,9 +160,9 @@ element, .dialog {
 ```css
 
 .element {
- position: absolute;
- top: 10px;
- left: 10px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }
 ```
 
@@ -317,16 +317,4 @@ h3 {
 
 ### 一群爱学习，爱分享，爱装逼，爱斗图，爱吃辣条，有梦想的年轻人...
 <br>
-
-![](http://thumb.qschou.com/files/tmp/91312614c4e9017b3b5727f05e0abcb00ba6da96h5.jpg)
-
-<br>
-
-### 我们不是 BAT 背景的技术大牛；
-### 但我们是一群年轻、有梦想、乐于分享 IT 工程师;（请尊称自己为工程师、不是程序猿）；
-### 我们曾经都想过，为什么网上那么多大牛，写的博客 ，发的文章，都特么好资深、好流弊!
-### 其实你也努力了，只不过别人比你再多了一些坚持，多了一分努力，多了一个梦想，仅此而已。
-
-![](http://thumb.qschou.com/files/tmp/913968524aaca529ddf5af5af48c94c25b614beeh5.jpg)
-
 
