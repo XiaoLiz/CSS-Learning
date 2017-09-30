@@ -1,0 +1,222 @@
+
+@import "./reset.less";
+
+@import "./font/weui-icon_font.less";
+
+
+
+.nav{
+    box-shadow: 1px 5px 5px #fc0;
+    font-size: 14px;
+
+    transform: all 1s ease;
+
+    h2{
+        font-weight: normal;
+        color: #fff;
+    }
+
+    .desc{
+        font-size: 24px;
+    }
+}
+
+
+
+@weuiCellBorderColor: #ccc;
+
+@weuiCellHeight:45px;
+@weuiCellFontSize:17px;
+@weuiLineColorLight: #E5E5E5;
+@weuiDialogLinkColor: #3CC51F;
+
+.weui-input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: 1.47058824em;
+    line-height: 1.47058824;
+}
+
+.weui-cells_form input,
+.weui-cells_form textarea,
+.weui-cells_form label[for] {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.weui-cells {
+    margin-top: 1.17647059em;
+    background-color: #FFFFFF;
+    line-height: 1.47058824;
+    font-size: 17px;
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+        .setBottomLine(@weuiCellBorderColor);
+        z-index: 2;
+    }
+
+    &:after{
+        .setTopLine(@weuiCellBorderColor);
+        z-index: 2;
+    }
+}
+
+
+
+.setTopLine(@c: #b7b5b5) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid @c;
+    color: @c;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+}
+
+.setBottomLine(@c: #C7C7C7) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid @c;
+    color: @c;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+.weui-cells__title{
+    margin-top: .77em;
+    margin-bottom: .3em;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #999999;
+    font-size: 14px;
+
+    & + .weui-cells {
+        margin-top: 0;
+    }
+}
+
+.weui-cell {
+    padding: 10px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    &:before {
+        .setTopLine();
+        z-index: 2;
+    }
+
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+
+.weui-cell__bd{
+    flex: 1;
+}
+
+.weui-cell__ft {
+    text-align: right;
+    color: #09BB07;
+}
+
+.weui-check {
+    position: absolute;
+    left: -9999em;
+}
+
+.weui-check {
+
+    // radio
+    .weui-cells_radio & {
+        &:checked {
+            & + .weui-icon-checked {
+                &:before {
+                    display: block;
+                    content: '\EA08';
+                    color: #09BB07;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/***
+* weui-cell_vcode
+**/
+
+
+
+.weui-cell_vcode {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.weui-label {
+    display: block;
+    width: 105px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.weui-cell__bd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.weui-vcode-btn {
+    display: inline-block;
+    height: @weuiCellHeight;
+    margin-left: 5px;
+    padding: 0 0.6em 0 0.7em;
+    border-left: 1px solid @weuiLineColorLight;
+    line-height: @weuiCellHeight;
+    vertical-align: middle;
+    font-size: @weuiCellFontSize;
+    color: @weuiDialogLinkColor;
+    button&{
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        outline: 0;
+    }
+    &:active {
+        color: desaturate(@weuiDialogLinkColor, 30%);
+    }
+}
+
+.weui-vcode-img {
+    margin-left: 5px;
+    height: 45px;
+    vertical-align: middle;
+}
+
+
