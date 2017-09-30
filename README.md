@@ -2,8 +2,8 @@
 
 ## 目录
 
-- [CSS前端规范](./css/README.md)
-- [weui分析](./weui/README.md)
+- [CSS 前端规范](./css/README.md)
+- [WeUi 结构分析](./weui/README.md)
 
 
 ## 参考文献
