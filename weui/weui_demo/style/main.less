@@ -112,11 +112,7 @@
 .weui-cell {
     padding: 10px 15px;
     position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
     align-items: center;
 
     &:before {
@@ -186,8 +182,6 @@
 }
 
 .weui-cell__bd {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
     flex: 1;
 }
 
@@ -218,5 +212,28 @@
     height: 45px;
     vertical-align: middle;
 }
+
+
+
+/*
+* weui-button__submit
+**/
+
+:root {
+    --button__submit: #3CC51F;
+    --button__font: 14px;
+}
+
+.weui-button__submit {
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: var(--button__submit);
+    font-size: var(--button__font);
+}
+
+
+
 
 

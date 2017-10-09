@@ -15,6 +15,7 @@
     "gulp-header": "^1.8.9",
     "gulp-less": "^3.3.2",
     "gulp-postcss": "^7.0.0",
+    "postcss-cssnext": "^3.0.2",
     "postcss-discard-comments": "^2.0.4"
   }
 }

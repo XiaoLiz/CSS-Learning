@@ -3,6 +3,8 @@ var path = require('path');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var comments = require('postcss-discard-comments');   //清除压缩文件注释
+var cssnext = require("postcss-cssnext");
+
 var header = require('gulp-header');   //css header add  desc
 var cssnano = require('gulp-cssnano');  //css 压缩文件
 var less = require('gulp-less');
@@ -22,13 +24,28 @@ gulp.task('style', function() {
 
     return gulp.src('./style/main.less')
         .pipe(less())
-        .pipe(postcss([autoprefixer(['iOS >= 7', 'Android >= 4.1']), comments()]))
+        .pipe(postcss([
+            //autoprefixer(['iOS >= 7', 'Android >= 4.1']),
+            cssnext({
+                browsers:{
+                    "> 1%"
+                    "last 2 versions"
+                },
+                features: {
+                    customProperties: {
+                        variables: {
+                            mainColor: "red",
+                            altColor: "blue"
+                        }
+                    }
+                }
+            }),
+            comments()
+        ]))
         .pipe(header(version, { pkg: pkg }))
         // .pipe(cssnano())
         .pipe(gulp.dest('./dist/style'));
 });
-
-
 
 
 gulp.task('watch', function() {
