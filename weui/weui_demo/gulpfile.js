@@ -27,10 +27,14 @@ gulp.task('style', function() {
         .pipe(postcss([
             //autoprefixer(['iOS >= 7', 'Android >= 4.1']),
             cssnext({
-                browsers:{
-                    "> 1%"
-                    "last 2 versions"
-                },
+                browsers: [
+                    "> 1%",
+                    "last 2 versions",
+                    "Android >= 4.0",
+                    "iOS >= 7",
+                    "ie >=9",
+                    "opera 12"
+                ],
                 features: {
                     customProperties: {
                         variables: {
@@ -43,7 +47,7 @@ gulp.task('style', function() {
             comments()
         ]))
         .pipe(header(version, { pkg: pkg }))
-        // .pipe(cssnano())
+        .pipe(cssnano())
         .pipe(gulp.dest('./dist/style'));
 });
 
