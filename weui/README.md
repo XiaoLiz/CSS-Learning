@@ -8,9 +8,7 @@
 ### 目录结构
 ![](https://pic.36krcnd.com/avatar/201709/30055455/yvqynz0lsvc2l154.jpeg)
 
-<br>
 
-<br>
 ### Config gulpfile 	
 
 
@@ -18,11 +16,9 @@
 
 1、文件输入 → Gulp 插件处理 → 文件输出
 
-<br>
 `src <stream.Readable> 输出到目标可写流（writable）的源流（source stream）`
-<br>
-`在可读流（readable stream）上调用 stream.pipe() 方法，并在目标流向 (destinations) 中添加当前可写流 ( writable ) 时，将会在可写流上触发 'pipe' 事件。`
 
+`在可读流（readable stream）上调用 stream.pipe() 方法，并在目标流向 (destinations) 中添加当前可写流 ( writable ) 时，将会在可写流上触发 'pipe' 事件。`
 ```
 
 const writer = getWritableStreamSomehow();  //可写流
@@ -67,11 +63,7 @@ gulp.task('style', function() {
         // .pipe(cssnano())
         .pipe(gulp.dest('./dist/style'));
 });
-
 ```
-
-
-<br><br>
 
 #### 组件栗子分析（weui-check 单选框 或者复选为例）
 
@@ -81,9 +73,9 @@ gulp.task('style', function() {
 
 ##### 3、一个组件或者dom类名称最多不超过三个；
 
+
 ```	
     <div class="weui-cells weui-cells_radio">
-
     <label class="weui-cell weui-check__label" for="x11">
         <div class="weui-cell__bd"></div>
         <div class="weui-cell__ft">
@@ -104,7 +96,11 @@ gulp.task('style', function() {
 
 ##### 3、 css技巧
 
-label 与 input 关联绑定
+label 与 input 关联绑定:
+
+优点：`不需要额外js控制页面交互效果，减少与js耦合`
+
+
 ```
     <label class="weui-cell weui-check__label" for="x11">
         <div class="weui-cell__bd"></div>
@@ -117,7 +113,6 @@ label 与 input 关联绑定
 ```
 
 less
-
 ```
 .weui-check {
     // radio
@@ -137,7 +132,6 @@ less
 ```
 
 编译后的css
-
 ```
     .weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
         display:block;
@@ -148,36 +142,29 @@ less
 ```
 
 
-
 ##### 4、巧用相邻兄弟选择器， 
-###### 优点: 减少类名称，保证保证 dome 简洁
+###### 优点: 减少类名称，保证保证 dom 简洁
 
 
 `<div class="weui-cells__title">复选列表项</div>`
-
 `<div class="weui-cells weui-cells_radio"></div>`
-
 
 ```	
 .weui-cells__title{
     margin-top: .77em;
-  
-   
+    
     & + .weui-cells {
         margin-top: 0;
     }
 }
-
 ```
 
 
-## 参考文献
-
+## 参考资料
 
 - [Web 前端规范文档](http://alloyteam.github.io/CodeGuide/) -腾讯AlloyTeam
 - [An Introduction to PostCSS](https://www.sitepoint.com/an-introduction-to-postcss/) 
 - [postcss-cssnext](http://cssnext.io/usage/)
-
 
 
 
