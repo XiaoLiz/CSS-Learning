@@ -20,13 +20,16 @@ gulp.task('style', function() {
         ''
     ].join('\n');
 
-    return gulp.src('./style/*.less')
+    return gulp.src('./style/main.less')
         .pipe(less())
         .pipe(postcss([autoprefixer(['iOS >= 7', 'Android >= 4.1']), comments()]))
         .pipe(header(version, { pkg: pkg }))
         // .pipe(cssnano())
         .pipe(gulp.dest('./dist/style'));
 });
+
+
+
 
 gulp.task('watch', function() {
     gulp.watch('style/*', ['style'])

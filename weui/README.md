@@ -1,14 +1,9 @@
 ## WeUI 介绍
 
-#### 本次讲解weui重要的两点：
+#### 本次讲解weui重要点：
 
-	```	
-		1、如何写出优雅的css;
-		
-		2、组件的编写以及命名；
-	```
-
-
+ 如何写出优雅的css以及组件命名
+  
 
 ### 目录结构
 ![](https://pic.36krcnd.com/avatar/201709/30055455/yvqynz0lsvc2l154.jpeg)
@@ -48,6 +43,8 @@ reader.pipe(writer);
 
 `sourcemaps`: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置。
 
+
+
 `gulp-header`: 给文本文件头部追加内容
 
 ```
@@ -82,6 +79,7 @@ gulp.task('style', function() {
 
 ##### 2、前缀-组件名 && 前缀-组件名__修饰名
 
+##### 3、一个组件或者dom类名称最多不超过三个；
 
 ```	
 	<div class="weui-cells weui-cells_radio">
@@ -102,12 +100,56 @@ gulp.task('style', function() {
         </div>
     </label>
 </div>
+```
 
+##### 3、 css技巧
+
+label 与 input 关联绑定
+```
+	<label class="weui-cell weui-check__label" for="x11">
+        <div class="weui-cell__bd"></div>
+        <div class="weui-cell__ft">
+            <input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
+            <span class="weui-icon-checked"></span>
+        </div>
+    </label>
+     
+```
+
+less
+
+```
+.weui-check {
+    // radio
+    .weui-cells_radio & {
+        &:checked {
+            & + .weui-icon-checked {
+                &:before {
+                    display: block;
+                    content: '\EA08';
+                    color: #09BB07;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+```
+
+编译后的css
+
+```
+    .weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+        display:block;
+        content:'\EA08';
+        color:#09BB07;
+        font-size:16px;
+    } 
 ```
 
 
 
-##### 2、巧用相邻兄弟选择器， 
+##### 4、巧用相邻兄弟选择器， 
 ###### 优点: 减少类名称，保证保证 dome 简洁
 
 
@@ -127,39 +169,3 @@ gulp.task('style', function() {
 }
 
 ```
-
-
-##### 3、 css技巧
-
-
-label 与 input 关联绑定
-
-```
-	<label class="weui-cell weui-check__label" for="x11">
-        <div class="weui-cell__bd"></div>
-        <div class="weui-cell__ft">
-            <input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
-            <span class="weui-icon-checked"></span>
-        </div>
-    </label>
-    
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
