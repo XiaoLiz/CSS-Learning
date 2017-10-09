@@ -38,14 +38,15 @@ reader.pipe(writer);
 
 #### 相关工具
 
-`yargs`: 命令行解析器，方便管理自定义的多个任务；
+`postcss: PostCSS本身不是一个预处理器; 它不会转换CSS。 事实上，它本身并不多。 它提供了一个CSS解析器和一个框架，用于创建可以分析，lint，处理资源，优化，创建回退以及以其他方式转换已解析的CSS的插件`
 
-`sourcemaps`: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置。
+`yargs: 命令行解析器，方便管理自定义的多个任务；`
 
-`gulp-postcss`:
-`postcss-discard-comments`: 清除编译后css中的注释
+`sourcemaps: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置。`
+
+`postcss-discard-comments: 清除编译后css中的注释 `
  
-`gulp-header`: 给文本文件头部追加内容
+`gulp-header: 给文本文件头部追加内容 `
 
 ```
 // using data from package.json 
@@ -76,13 +77,12 @@ gulp.task('style', function() {
 
 ##### 1、WeUI组件命名借鉴 BEM（block-element-modifier）规范，形成WeUI独特的风格；
 
-
 ##### 2、前缀-组件名 && 前缀-组件名__修饰名
 
 ##### 3、一个组件或者dom类名称最多不超过三个；
 
 ```	
-	<div class="weui-cells weui-cells_radio">
+    <div class="weui-cells weui-cells_radio">
 
     <label class="weui-cell weui-check__label" for="x11">
         <div class="weui-cell__bd"></div>
@@ -106,7 +106,7 @@ gulp.task('style', function() {
 
 label 与 input 关联绑定
 ```
-	<label class="weui-cell weui-check__label" for="x11">
+    <label class="weui-cell weui-check__label" for="x11">
         <div class="weui-cell__bd"></div>
         <div class="weui-cell__ft">
             <input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
