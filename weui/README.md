@@ -2,7 +2,7 @@
 
 #### 本次讲解weui重要点：
 
- 如何写出优雅的css以及组件命名
+ `如何写出优雅的css以及组件命名`
   
 
 ### 目录结构
@@ -40,11 +40,11 @@ reader.pipe(writer);
 
 `yargs`: 命令行解析器，方便管理自定义的多个任务；
 
-
 `sourcemaps`: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置。
 
-
-
+`gulp-postcss`:
+`postcss-discard-comments`: 清除编译后css中的注释
+ 
 `gulp-header`: 给文本文件头部追加内容
 
 ```
@@ -169,3 +169,15 @@ less
 }
 
 ```
+
+
+## 参考文献
+
+- [Web 前端规范文档](http://alloyteam.github.io/CodeGuide/) -腾讯AlloyTeam
+- [An Introduction to PostCSS](https://www.sitepoint.com/an-introduction-to-postcss/) -Postcss
+
+
+
+
+
+
