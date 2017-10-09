@@ -4,5 +4,6 @@
 .idea/vcs.xml
 
 weui/weui-demo/.idea
-weui/weui-demo/node_modules/*
 weui/weui_demo/package-lock.json
+weui/weui_demo/node_modules/
+.idea/
