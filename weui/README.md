@@ -159,11 +159,19 @@ less
 ```
 
 
-## 参考资料
+#### 知识拓展
+
+- [PostCSS 简介](https://github.com/XiaoLiz/CSS-Learning/blob/master/css/PostCSS-Extended_README.md)
+- [REM 命名](https://github.com/XiaoLiz/CSS-Learning/blob/master/css/README.md#bem)
+
+
+
+
+#### 参考资料
 
 - [Web 前端规范文档](http://alloyteam.github.io/CodeGuide/) -腾讯AlloyTeam
 - [An Introduction to PostCSS](https://www.sitepoint.com/an-introduction-to-postcss/) 
-- [postcss-cssnext](http://cssnext.io/usage/)
+- [Postcss-cssnext](http://cssnext.io/usage/)
 
 
 
