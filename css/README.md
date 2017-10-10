@@ -41,7 +41,7 @@
 
 
 <a name="bem"></a>
-### 1、BEM命名（存在争议 团队决定）
+### 1、BEM命名（需要团队一致）
 
 **[BEM Document](http://https://en.bem.info/methodology/key-concepts/)**， “Block-Element--Modifier”，是一种用于 HTML 和 CSS 类名的_`命名约定` 。
 
