@@ -3,18 +3,16 @@
 `PostCSS: PostCSS 本身不是一个预处理器; 它不会转换CSS。 事实上，它本身并不多。 它提供了一个CSS解析器和一个框架，用于创建可以分析，lint，处理资源，优化，创建回退以及以其他方式转换已解析的CSS的插件`
 
 
-### Plugins
+### Plugins：
 
 
-####  Autoprefixer
+####  1、Autoprefixer
 
 在gulp中，可以使用 AutoPrefixer官网 推荐的 postcss + autoprefixer两个插件的组合，也可以通过gulp-autoprefixer这一个插件。
 
 cssnext 中已经包含了对 Autoprefixer 的使用，因此使用了 cssnext 就不再需要使用 Autoprefixer
 (同时使用的时候，会提示报错！)
-
-
-##### postcss + autoprefixer
+】
 
 ```
     var postcss = require('gulp-postcss');
@@ -28,10 +26,9 @@ cssnext 中已经包含了对 Autoprefixer 的使用，因此使用了 cssnext �
 ```
 
 
-####  postcss-cssnext   
+####  2、postcss-cssnext   
 
 `postcss-cssnext: cssnext 插件允许开发人员在当前的项目中使用 CSS 将来版本中可能会加入的新特性。cssnext 负责把这些新特性转译成当前浏览器中可以使用的语法。`
-
 `cssnano: 优化范围从压缩颜色和删除注释到丢弃覆盖的规则`
 
 
