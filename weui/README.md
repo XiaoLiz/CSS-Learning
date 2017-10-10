@@ -159,12 +159,10 @@ less
 ```
 
 
-
 #### 知识拓展
 
 - [PostCSS 简介](https://github.com/XiaoLiz/CSS-Learning/blob/master/css/PostCSS-Extended_README.md)
-
-- [REM 命名](https://github.com/XiaoLiz/CSS-Learning/blob/master/css/README.md#bem)
+- [REM 命名](https://github.com/XiaoLiz/CSS-Learning/blob/master/css/CSS-Guideline_README.md#bem)
 
 
 
