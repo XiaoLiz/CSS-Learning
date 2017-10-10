@@ -7,6 +7,7 @@ var cssnext = require("postcss-cssnext");
 
 var header = require('gulp-header');   //css header add  desc
 var cssnano = require('gulp-cssnano');  //css 压缩文件
+var sourcemaps = require('gulp-sourcemaps');
 var less = require('gulp-less');
 var pkg = require('./package.json');
 
@@ -23,6 +24,7 @@ gulp.task('style', function() {
     ].join('\n');
 
     return gulp.src('./style/main.less')
+        .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(postcss([
             //autoprefixer(['iOS >= 7', 'Android >= 4.1']),
@@ -35,25 +37,30 @@ gulp.task('style', function() {
                     "ie >=9",
                     "opera 12"
                 ],
-                features: {
-                    customProperties: {
-                        variables: {
-                            mainColor: "red",
-                            altColor: "blue"
-                        }
-                    }
+                features: {  //对未来css的新特性转换
+                    customProperties: true
+                //     customProperties: {
+                //         variables: {
+                //             mainColor: "red",
+                //             altColor: "blue"
+                //         }
+                //     }
                 }
             }),
             comments()
         ]))
         .pipe(header(version, { pkg: pkg }))
-        .pipe(cssnano())
+        // .pipe(cssnano({
+        //     zindex: false,
+        //     safe: true
+        // }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/style'));
 });
 
 
 gulp.task('watch', function() {
-    gulp.watch('style/*', ['style'])
+    gulp.watch('style/*', ['style']);
 });
 
 

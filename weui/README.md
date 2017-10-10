@@ -34,7 +34,7 @@ reader.pipe(writer);
 
 #### 相关工具
 
-`postcss: PostCSS本身不是一个预处理器; 它不会转换CSS。 事实上，它本身并不多。 它提供了一个CSS解析器和一个框架，用于创建可以分析，lint，处理资源，优化，创建回退以及以其他方式转换已解析的CSS的插件`
+
 
 `yargs: 命令行解析器，方便管理自定义的多个任务；`
 
@@ -99,7 +99,6 @@ gulp.task('style', function() {
 label 与 input 关联绑定:
 
 优点：`不需要额外js控制页面交互效果，减少与js耦合`
-
 
 ```
     <label class="weui-cell weui-check__label" for="x11">

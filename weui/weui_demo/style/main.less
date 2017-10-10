@@ -1,14 +1,11 @@
 
 @import "./reset.less";
-
 @import "./font/weui-icon_font.less";
-
 
 
 .nav{
     box-shadow: 1px 5px 5px #fc0;
     font-size: 14px;
-
     transform: all 1s ease;
 
     h2{
@@ -40,6 +37,8 @@
     color: inherit;
     height: 1.47058824em;
     line-height: 1.47058824;
+    position: relative;
+    z-index: 10;
 }
 
 .weui-cells_form input,
@@ -47,7 +46,6 @@
 .weui-cells_form label[for] {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 
 .weui-cells {
     margin-top: 1.17647059em;
@@ -67,8 +65,6 @@
         z-index: 2;
     }
 }
-
-
 
 .setTopLine(@c: #b7b5b5) {
     content: " ";
@@ -219,6 +215,7 @@
 * weui-button__submit
 **/
 
+
 :root {
     --button__submit: #3CC51F;
     --button__font: 14px;
@@ -232,6 +229,11 @@
     background: var(--button__submit);
     font-size: var(--button__font);
 }
+
+
+
+
+
 
 
 
