@@ -4,18 +4,21 @@
   "description": "css",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp -ws",
+    "test": "gulp release"
   },
   "author": "LIYI",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-header": "^1.8.9",
     "gulp-less": "^3.3.2",
     "gulp-postcss": "^7.0.0",
     "postcss-cssnext": "^3.0.2",
-    "postcss-discard-comments": "^2.0.4"
+    "postcss-discard-comments": "^2.0.4",
+    "yargs": "^9.0.1"
   }
 }

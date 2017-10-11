@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var path = require('path');
+
+var less = require('gulp-less');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var comments = require('postcss-discard-comments');   //清除压缩文件注释
@@ -8,12 +10,26 @@ var cssnext = require("postcss-cssnext");
 var header = require('gulp-header');   //css header add  desc
 var cssnano = require('gulp-cssnano');  //css 压缩文件
 var sourcemaps = require('gulp-sourcemaps');
-var less = require('gulp-less');
+
 var pkg = require('./package.json');
 
-// console.log(__dirname);
+var browserSync = require('browser-sync');
+var yargs = require('yargs').options({
+    w: {
+        alias: 'watch',
+        type: 'boolean'
+    },
+    s: {
+        alias: 'server',
+        type: 'boolean'
+    },
+    p: {
+        alias: 'port',
+        type: 'number'
+    }
+}).argv;
 
-gulp.task('style', function() {
+gulp.task('style:build', function() {
     var version = [
         '/*!',
         ' * QUI v<%= pkg.version %> (<%= pkg.author %>)',
@@ -47,21 +63,54 @@ gulp.task('style', function() {
                 //     }
                 }
             }),
-            comments()
+            // comments()
         ]))
         .pipe(header(version, { pkg: pkg }))
-        // .pipe(cssnano({
-        //     zindex: false,
-        //     safe: true
-        // }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./dist/style'));
-});
+        .pipe(cssnano({
+            zindex: false,
+            safe: true
+        }))
+        .pipe(gulp.dest('./dist/style'))
+        .pipe(browserSync.reload({ stream: true }))
 
+
+});
 
 gulp.task('watch', function() {
-    gulp.watch('style/*', ['style']);
+    gulp.watch('style/*', ['style:build']);
+});
+
+gulp.task('server', function() {
+    yargs.p = yargs.p || 8080;
+    browserSync.init({
+        server: {
+            baseDir: './'
+        },
+        ui: {
+            port: yargs.p + 1,
+            weinre: {
+                port: yargs.p + 2
+            }
+        },
+        port: yargs.p
+    });
 });
 
 
-gulp.task('default', ['style', 'watch']);
+
+gulp.task('default', ['style:build'], function() {
+    if (yargs.s) {
+        gulp.start('server');
+    }
+
+    if (yargs.w) {
+        gulp.start('watch');
+    }
+});
+
+
+
+
+//gulp.task('default', ['style', 'watch']);
+
