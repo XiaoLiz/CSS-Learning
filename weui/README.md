@@ -6,7 +6,7 @@
   
 
 ### 目录结构
-![](https://pic.36krcnd.com/avatar/201709/30055455/yvqynz0lsvc2l154.jpeg)
+![](./WechatIMG237.jpeg)
 
 
 ### Config gulpfile 	
@@ -15,6 +15,9 @@
 #### gulp实现原理（基于node文件流实现）
 
 1、文件输入 → Gulp 插件处理 → 文件输出
+
+![](./pipe.jpeg)
+
 
 `src <stream.Readable> 输出到目标可写流（writable）的源流（source stream）`
 
