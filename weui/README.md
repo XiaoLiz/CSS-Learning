@@ -6,7 +6,7 @@
   
 
 ### 目录结构
-![](./WechatIMG237.jpeg)
+![](./weui_demo/image/WechatIMG237.jpeg)
 
 
 ### Config gulpfile 	
@@ -16,7 +16,7 @@
 
 1、文件输入 → Gulp 插件处理 → 文件输出
 
-![](./pipe.jpeg)
+![](./weui_demo/image/pipe.jpeg)
 
 
 `src <stream.Readable> 输出到目标可写流（writable）的源流（source stream）`
