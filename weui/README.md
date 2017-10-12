@@ -22,7 +22,8 @@
 `src <stream.Readable> 输出到目标可写流（writable）的源流（source stream）`
 
 `在可读流（readable stream）上调用 stream.pipe() 方法，并在目标流向 (destinations) 中添加当前可写流 ( writable ) 时，将会在可写流上触发 'pipe' 事件。`
-```
+
+```js
 
 const writer = getWritableStreamSomehow();  //可写流
 const reader = getReadableStreamSomehow();  //可读流
@@ -50,7 +51,8 @@ reader.pipe(writer);
 `gulp-cssnano: 优化范围从压缩颜色和删除注释到丢弃覆盖的规则，归一化unicode范围描述符，甚至调整渐变参数以获得较小的输出值！ 另外，在转换的过程中，我们添加了Browserslist以提供不同的输出。`
 
 
-```
+```js
+
 // using data from package.json 
 gulp.task('style', function() {
     var version = [
@@ -82,8 +84,8 @@ gulp.task('style', function() {
 ##### 3、一个组件或者dom类名称最多不超过三个；
 
 
-```	
-    <div class="weui-cells weui-cells_radio">
+```html
+<div class="weui-cells weui-cells_radio">
     <label class="weui-cell weui-check__label" for="x11">
         <div class="weui-cell__bd"></div>
         <div class="weui-cell__ft">
@@ -108,19 +110,20 @@ label 与 input 关联绑定:
 
 优点：`不需要额外js控制页面交互效果，减少与js耦合`
 
-```
-    <label class="weui-cell weui-check__label" for="x11">
-        <div class="weui-cell__bd"></div>
-        <div class="weui-cell__ft">
-            <input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
-            <span class="weui-icon-checked"></span>
-        </div>
-    </label>
-     
+```html
+
+<label class="weui-cell weui-check__label" for="x11">
+    <div class="weui-cell__bd"></div>
+    <div class="weui-cell__ft">
+        <input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
+        <span class="weui-icon-checked"></span>
+    </div>
+</label>  
 ```
 
 less
-```
+
+```less
 .weui-check {
     // radio
     .weui-cells_radio & {
@@ -139,13 +142,13 @@ less
 ```
 
 编译后的css
-```
-    .weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
-        display:block;
-        content:'\EA08';
-        color:#09BB07;
-        font-size:16px;
-    } 
+```css
+.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+    display:block;
+    content:'\EA08';
+    color:#09BB07;
+    font-size:16px;
+} 
 ```
 
 
@@ -153,15 +156,30 @@ less
 ###### 优点: 减少类名称，保证保证 dom 简洁
 
 
-`<div class="weui-cells__title">复选列表项</div>`
-
-`<div class="weui-cells weui-cells_radio"></div>`
-
+```html
+<div class="weui-cells__title">复选列表项</div>
+<div class="weui-cells weui-cells_radio"></div>
 ```	
+
+```	less
 .weui-cells__title{
     margin-top: .77em;
     
     & + .weui-cells {
+        margin-top: 0;
+    }
+}
+```
+
+编译后
+
+```css
+
+.weui-cells__title{
+    margin-top: .77em;
+ }
+    
+.weui-cells__title + .weui-cells {
         margin-top: 0;
     }
 }
