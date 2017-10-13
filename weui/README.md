@@ -2,8 +2,12 @@
 
 #### 本次讲解weui重要点：
 
- `如何写出优雅的css以及组件命名`
-  
+
+##### 1、weui 结构简介；
+ 
+##### 2、项目实例分析；
+ 
+ 
 
 ### 目录结构
 ![](./weui_demo/image/WechatIMG237.jpeg)
@@ -196,7 +200,7 @@ less
 #### 相关主题
 
 - [Web 前端规范文档](http://alloyteam.github.io/CodeGuide/) -腾讯AlloyTeam
-
+- [yargs-API](https://github.com/yargs/yargs/blob/master/docs/api.md)-Github
 
 
 
