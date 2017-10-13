@@ -1,9 +1,12 @@
-# WeUI Demo 预览；
+# WeUI Demo 运行；
 
 
-#### 1、cd /weui_demo && sudo npm install 
+```html
 
-#### 2、npm run start 
+1、cd /weui_demo && sudo npm install 
+
+2、npm run start 
+```
 
 
 
