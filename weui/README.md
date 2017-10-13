@@ -42,17 +42,16 @@ reader.pipe(writer);
 
 #### 相关工具
 
+`yargs: 命令行解析器，方便管理自定义的多个任务`
 
-
-`yargs: 命令行解析器，方便管理自定义的多个任务；`
-
-`sourcemaps: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置。`
+`sourcemaps: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置`
 
 `postcss-discard-comments: 清除编译后css中的注释 `
  
-`gulp-header: 给文本文件头部追加内容 `
+`gulp-header: 给文本文件头部追加内容`
 
-`gulp-cssnano: 优化范围从压缩颜色和删除注释到丢弃覆盖的规则，归一化unicode范围描述符，甚至调整渐变参数以获得较小的输出值！ 另外，在转换的过程中，我们添加了Browserslist以提供不同的输出。`
+`gulp-cssnano: 优化范围从压缩颜色和删除注释到丢弃覆盖的规则，归一化unicode范围描述符，甚至调整渐变参数以获得较小的输出值！ 另外，在转换的过程中，我们添加了Browserslist以提供不同的输出`
+
 
 
 ```js
@@ -78,6 +77,9 @@ gulp.task('style', function() {
         .pipe(gulp.dest('./dist/style'));
 });
 ```
+
+ -[WeUi-Demo](./weui_demo)
+
 
 #### 组件栗子分析（weui-check 单选框 或者复选为例）
 
@@ -106,6 +108,7 @@ gulp.task('style', function() {
         </div>
     </label>
 </div>
+
 ```
 
 ##### 3、 css技巧
@@ -116,13 +119,19 @@ label 与 input 关联绑定:
 
 ```html
 
-<label class="weui-cell weui-check__label" for="x11">
-    <div class="weui-cell__bd"></div>
-    <div class="weui-cell__ft">
-        <input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
-        <span class="weui-icon-checked"></span>
-    </div>
-</label>  
+<div class="weui-cells__title">复选列表项</div>
+<div class="weui-cells weui-cells_checkbox">
+    <label class="weui-cell weui-check__label" for="s11">
+        <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked"/>
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>standard is dealt for u.</p>
+        </div>
+    </label>
+</div>
+
 ```
 
 less
@@ -130,7 +139,7 @@ less
 ```less
 .weui-check {
     // radio
-    .weui-cells_radio & {
+    .weui-cells_checkbox & {
         &:checked {
             & + .weui-icon-checked {
                 &:before {
