@@ -306,11 +306,12 @@ h3 {
 
 <br>
 
-<a name="about"></a>
-### 关于我们
 
-<br>
 
-### 一群爱学习，爱分享，爱装逼，爱斗图，爱吃辣条，有梦想的年轻人...
-<br>
+#### 参考资料
+
+- [Web 前端规范文档](http://alloyteam.github.io/CodeGuide/) -腾讯AlloyTeam
+
+
+
 
