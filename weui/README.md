@@ -42,15 +42,15 @@ reader.pipe(writer);
 
 #### 相关工具
 
-`yargs: 命令行解析器，方便管理自定义的多个任务`
+`yargs: 命令行解析器，方便管理自定义的多个任务;`
 
-`sourcemaps: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置`
+`sourcemaps: 就是一个信息文件，里面储存着位置信息。也就是说，转换后的代码的每一个位置，所对应的转换前的位置;`
 
-`postcss-discard-comments: 清除编译后css中的注释 `
+`postcss-discard-comments: 清除编译后css中的注释;`
  
-`gulp-header: 给文本文件头部追加内容`
+`gulp-header: 给文本文件头部追加内容;`
 
-`gulp-cssnano: 优化范围从压缩颜色和删除注释到丢弃覆盖的规则，归一化unicode范围描述符，甚至调整渐变参数以获得较小的输出值！ 另外，在转换的过程中，我们添加了Browserslist以提供不同的输出`
+`gulp-cssnano: 优化范围从压缩颜色和删除注释到丢弃覆盖的规则，归一化unicode范围描述符，甚至调整渐变参数以获得较小的输出值！ 另外，在转换的过程中，我们添加了Browserslist以提供不同的输出;`
 
 
 
@@ -156,7 +156,7 @@ less
 
 编译后的css
 ```css
-.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before {
     display:block;
     content:'\EA08';
     color:#09BB07;
