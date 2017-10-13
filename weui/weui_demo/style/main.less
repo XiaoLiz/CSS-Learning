@@ -138,9 +138,12 @@
     left: -9999em;
 }
 
+
+/**
+* radio
+**/
 .weui-check {
 
-    // radio
     .weui-cells_radio & {
         &:checked {
             & + .weui-icon-checked {
@@ -153,17 +156,56 @@
             }
         }
     }
-
 }
+
+
+
+/**
+* checkbox
+**/
+.weui-cells_checkbox {
+    .weui-cell__hd {
+        padding-right: 0.35em;
+    }
+    .weui-icon-checked {
+        &:before {
+            content: '\EA01';
+            color: #C9C9C9;
+            font-size: 23px;
+            display: block;
+        }
+    }
+}
+
+
+// method2 accessbility
+.weui-check {
+    // checkbox
+    .weui-cells_checkbox & {
+        &:checked {
+            & + .weui-icon-checked {
+                &:before {
+                    content: '\EA06';
+                    color: #09BB07;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
 /***
 * weui-cell_vcode
 **/
-
-
-
 .weui-cell_vcode {
     padding-top: 0;
     padding-right: 0;

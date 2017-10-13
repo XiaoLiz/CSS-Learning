@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>Title</title>
-    <link rel="stylesheet" href="./dist/style/main.css">
+    <link rel="stylesheet" href="./dist/style/main.min.css">
 </head>
 <body>
 
@@ -12,11 +12,11 @@
 <img src="https://pic.36krcnd.com/avatar/201709/30072522/yxal8osum3yaun9f.jpeg" alt="" height="260" style="margin: 0 auto; display: block;">
 
 
-<div class="weui-cells__title">复选列表项</div>
+<div class="weui-cells__title">单选列表项</div>
 <div class="weui-cells weui-cells_radio">
     <label class="weui-cell weui-check__label" for="x11">
         <div class="weui-cell__bd">
-            <p>cell standard</p>
+            <p>cell checkbox</p>
         </div>
         <div class="weui-cell__ft">
             <input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
@@ -26,7 +26,7 @@
 
     <label class="weui-cell weui-check__label" for="x12">
         <div class="weui-cell__bd">
-            <p>cell standard</p>
+            <p>cell checkbox</p>
         </div>
         <div class="weui-cell__ft">
             <input type="radio" class="weui-check" name="radio1" id="x12">
@@ -35,6 +35,28 @@
     </label>
 </div>
 
+
+<div class="weui-cells__title">复选列表项</div>
+<div class="weui-cells weui-cells_checkbox">
+    <label class="weui-cell weui-check__label" for="s11">
+        <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked"/>
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>standard is dealt for u.</p>
+        </div>
+    </label>
+    <label class="weui-cell weui-check__label" for="s12">
+        <div class="weui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="weui-check" id="s12"/>
+            <i class="weui-icon-checked"></i>
+        </div>
+        <div class="weui-cell__bd">
+            <p>standard is dealicient for u.</p>
+        </div>
+    </label>
+</div>
 
 <div class="weui-cells weui-cells_form">
 
@@ -63,10 +85,7 @@
     </div>
 </div>
 
-
-
 <button class="weui-button__submit weui-submit__btn">button</button>
-
 
 </body>
 </html>

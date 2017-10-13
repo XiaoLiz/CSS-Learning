@@ -10,6 +10,7 @@ var cssnext = require("postcss-cssnext");
 var header = require('gulp-header');   //css header add  desc
 var cssnano = require('gulp-cssnano');  //css 压缩文件
 var sourcemaps = require('gulp-sourcemaps');
+var rename = require('gulp-rename');
 
 var pkg = require('./package.json');
 
@@ -65,16 +66,22 @@ gulp.task('style:build', function() {
             }),
             // comments()
         ]))
+
         .pipe(header(version, { pkg: pkg }))
         .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./dist/style'))
+        .pipe(browserSync.reload({ stream: true }))
         .pipe(cssnano({
             zindex: false,
             safe: true
         }))
+        .pipe(sourcemaps.write())
+        .pipe(
+            rename(function(path) {
+                path.basename += '.min';
+            })
+        )
         .pipe(gulp.dest('./dist/style'))
-        .pipe(browserSync.reload({ stream: true }))
-
-
 });
 
 gulp.task('watch', function() {
