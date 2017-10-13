@@ -18,8 +18,7 @@
 ##### [ID选择器](#id-selectors)
 
 ##### [!important](#important)
-<br>
-<br>
+
 
 ### [Less相关](#less)
 
@@ -30,11 +29,8 @@
 ##### [混入(Mixin)](#Mixin)
 
 
-<br>
-
 #### [关于我们](#about)
 
-<br>
 
 <a name="css"></a>
 ### CSS
@@ -98,9 +94,6 @@
 
 
 
-
-<br>
-
 <a name="wrap"></a>
 ### 换行
 
@@ -143,8 +136,6 @@ element, .dialog {
 ```
 
 
-<br>
-
 <a name="soft-tab"></a>
 
 ### 缩进
@@ -174,9 +165,6 @@ element, .dialog {
 
 ```
 
-
-<br>
-
 <a name="id-selectors"></a>
 ### ID选择器
 
@@ -186,14 +174,11 @@ element, .dialog {
 
 
 
-
 <br>
 
 <a name="less"></a>
 ## Less相关
 
-
-<br>
 
 <a name="lessFormat"></a>
 ### 样式组织
@@ -239,8 +224,6 @@ element, .dialog {
 ```
 
 
-<br>
-
 <a name="import"></a>
 #### @import 语句
 
@@ -257,6 +240,7 @@ element, .dialog {
 ```
 
 
+
 **Good**
 
 ```less
@@ -266,8 +250,6 @@ element, .dialog {
 
 ```
 
-<br>
-
 <a name="Mixin"></a>
 ### 混入（Mixin）
 
@@ -275,10 +257,8 @@ element, .dialog {
 
 * `如果混入的是本身不输出内容的 mixin，必须在 mixin 后添加括号（即使不传参数），以区分这是否是一个 className（修改以后是否会影响 HTML）`
 
-<br>
 
 **Bad**
-
 
 ```less
 
@@ -304,13 +284,4 @@ h3 {
 }
 ```
 
-<br>
-
-<a name="about"></a>
-### 关于我们
-
-<br>
-
-### 一群爱学习，爱分享，爱装逼，爱斗图，爱吃辣条，有梦想的年轻人...
-<br>
 
