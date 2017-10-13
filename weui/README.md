@@ -202,8 +202,6 @@ less
 #### 知识拓展
 
 - [PostCSS 简介](../css/postcss/README.md)
-- [REM 命名](../css/css-guideline/README.md#bem)
-
 
 
 #### 参考资料
