@@ -285,3 +285,8 @@ h3 {
 ```
 
 
+#### 参考资料
+
+- [Web 前端规范文档](http://alloyteam.github.io/CodeGuide/) -腾讯AlloyTeam
+
+
