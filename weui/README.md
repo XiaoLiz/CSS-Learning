@@ -201,12 +201,12 @@ less
 
 #### 知识拓展
 
-- [PostCSS 简介](https://github.com/XiaoLiz/CSS-Learning/blob/master/css/PostCSS-Extended_README.md)
-- [REM 命名](https://github.com/XiaoLiz/CSS-Learning/blob/master/css/CSS-Guideline_README.md#bem)
+- [PostCSS 简介](../css/postcss/README.md)
+- [REM 命名](../css/css-guideline/README.md#bem)
 
 
 
-#### 相关主题
+#### 参考资料
 
 - [Web 前端规范文档](http://alloyteam.github.io/CodeGuide/) -腾讯AlloyTeam
 - [yargs-API](https://github.com/yargs/yargs/blob/master/docs/api.md)-Github
