@@ -66,7 +66,6 @@ gulp.task('style:build', function() {
             }),
             // comments()
         ]))
-
         .pipe(header(version, { pkg: pkg }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/style'))
@@ -75,7 +74,6 @@ gulp.task('style:build', function() {
             zindex: false,
             safe: true
         }))
-        .pipe(sourcemaps.write())
         .pipe(
             rename(function(path) {
                 path.basename += '.min';
