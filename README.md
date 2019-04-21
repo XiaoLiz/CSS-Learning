@@ -2,7 +2,7 @@
 
 ## 目录
 
-- [CSS 前端规范](./CSS-Guideline_README.md)
+- [CSS 前端规范](./css/css-guideline/README.md)
  
 - [WeUi 结构分析](./weui/README.md)
  
